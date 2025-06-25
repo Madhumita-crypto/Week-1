@@ -86,14 +86,13 @@ These indicators are critical for assessing water quality for **drinking, agricu
 
 ---
 
-## 📦 Files Generated
+## | File                                                                                                        | Purpose                                  |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [`pollution_model.pkl`](https://drive.google.com/file/d/18RJzu35vyuMgpcAE590u1IaDvHY3-SWq/view?usp=sharing) | 🔗 **Download Model** – Trained ML model |
+| `model_columns.pkl`                                                                                         | Stores the feature column structure      |
+| `Water_Quality_Predictor.ipynb`                                                                             | Main Jupyter Notebook with complete code |
+| `PB_All_2000_2021.csv`                                                                                      | Original dataset used for training       |
 
-| File                            | Purpose                         |
-| ------------------------------- | ------------------------------- |
-| `pollution_model.pkl`           | Saved trained model for reuse   |
-| `model_columns.pkl`             | Stores feature column structure |
-| `Water_Quality_Predictor.ipynb` | Main Jupyter Notebook with code |
-| `PB_All_2000_2021.csv`          | Original dataset                |
 
 ---
 
