@@ -92,7 +92,36 @@ A minimal `Streamlit` app (`app.py`) is provided to run the model interactively 
 ### How to Launch:
 ```bash
 streamlit run app.py
-Author
-Madhumita Ash
-B.Tech IT, GGSIPU
+```
+
+You’ll be able to:
+- Input year, station ID, and chemical indicators (NH₄, BSK5, Suspended solids)
+- Instantly view predicted pollutant levels for that station and year
+
+Great for quick demonstrations or scaling to a web dashboard!
+
+---
+
+## 📦 Files Generated
+
+| File                          | Purpose                                      |
+|-------------------------------|----------------------------------------------|
+| [`pollution_model.pkl`](https://drive.google.com/file/d/18RJzu35vyuMgpcAE590u1IaDvHY3-SWq/view?usp=sharing) | 🔗 **Download Trained Model** |
+| `model_columns.pkl`           | Stores the one-hot encoded feature columns   |
+| `Water_Quality_Predictor.ipynb` | Main Jupyter Notebook with full code        |
+| `PB_All_2000_2021.csv`        | Raw dataset used for model training          |
+| `app.py`                      | Streamlit app to interact with predictions   |
+
+---
+
+##  Author
+
+**Madhumita Ash**  
+B.Tech IT, GGSIPU  
 Shell-Edunet AI/ML Internship 2025
+
+---
+
+## ✅ Final Notes
+
+This project proves how machine learning can bridge the gap between raw environmental data and actionable insight. With additional features (like rainfall, temperature, or proximity to industrial zones), this model could scale to national-level water quality prediction systems.
