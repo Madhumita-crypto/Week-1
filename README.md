@@ -26,6 +26,7 @@ With climate change and urbanization pressing hard, this predictive model is a h
 - **Matplotlib & Seaborn** — Visualization  
 - **Scikit-learn** — ML modeling and evaluation  
 - **Joblib** — Model serialization  
+- **Streamlit** — Web-based model deployment
 
 ---
 
@@ -51,20 +52,21 @@ The following **6 parameters** were selected for multi-output regression:
 
 - **Features Used**:  
   - NH₄ (Ammonium)  
-  - BSK5 (BOD over 5 days)  
+  - BSK5 (Biochemical Oxygen Demand over 5 days)  
   - Suspended Solids  
   - Year  
-  - Month  
+  - Station ID (encoded via one-hot encoding)
 
 - **Processing Steps**:
-  - Handled missing values via **median imputation**
-  - Extracted **temporal features** from the date (`year`, `month`)
+  - Handled missing values using **median imputation**
+  - Extracted date-related features (`year`, `month`)
   - Sorted by `id` and `date`
+  - Applied one-hot encoding for station IDs
   - Used **train-test split (80-20%)**
 
 - **Evaluation Metrics**:  
-  - R² Score – Goodness of fit  
-  - Mean Squared Error – Prediction accuracy  
+  - **R² Score** – Goodness of fit  
+  - **Mean Squared Error (MSE)** – Prediction accuracy  
 
 ---
 
@@ -79,26 +81,18 @@ The following **6 parameters** were selected for multi-output regression:
 | PO₄       | 0.80     | 0.07               |
 | CL        | 0.91     | 140.34             |
 
-> ⚠️ *Note: These values are placeholders. Replace them with your actual test results from `model.predict()` evaluation.*
+> *Note: Replace these values with your actual results once the model is finalized.*
 
 ---
 
-## 📦 Files Generated
+## 🖥 Web App Interface
 
-| File                          | Purpose                                      |
-|-------------------------------|----------------------------------------------|
-| [`pollution_model.pkl`](https://drive.google.com/file/d/18RJzu35vyuMgpcAE590u1IaDvHY3-SWq/view?usp=sharing) | 🔗 **Download Model** – Trained ML model |
-| `model_columns.pkl`           | Stores the feature column structure          |
-| `Water_Quality_Predictor.ipynb` | Main Jupyter Notebook with complete code     |
-| `PB_All_2000_2021.csv`        | Original dataset used for training           |
+A minimal `Streamlit` app (`app.py`) is provided to run the model interactively in your browser.
 
-> 📥 You can directly download the trained model file (`pollution_model.pkl`) from [this link](https://drive.google.com/file/d/18RJzu35vyuMgpcAE590u1IaDvHY3-SWq/view?usp=sharing).
-
----
-
-## ✅ Final Notes
-
-This project proves how machine learning can bridge the gap between raw environmental data and actionable insight. With more features (like rainfall, temperature, or proximity to industrial zones), this model could scale to national-level water quality prediction systems.
-
----
-
+### How to Launch:
+```bash
+streamlit run app.py
+Author
+Madhumita Ash
+B.Tech IT, GGSIPU
+Shell-Edunet AI/ML Internship 2025
